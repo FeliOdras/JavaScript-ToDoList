@@ -1,4 +1,5 @@
 import "@scss/styles.scss"
+import Storage from "./Storage"
 
 // Helper
 const $ = (selector) => document.querySelector(selector);
