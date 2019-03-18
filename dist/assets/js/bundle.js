@@ -103,6 +103,10 @@ var $ = function $(selector) {
   return document.querySelector(selector);
 };
 
+var addNoteInput = $('#add-note');
+var addNoteButton = $('#add-note-button');
+console.log(addNoteInput, addNoteButton);
+
 /***/ }),
 
 /***/ "./src/assets/scss/styles.scss":
