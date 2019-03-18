@@ -1,7 +1,7 @@
 export default class Storage {
     constructor(localStorageKey) {
         this.key = localStorageKey;
-        this.data = this.get() || [];
+        this.data = this.get();
     }
 
     addDataSet(dataParam) {
@@ -17,6 +17,6 @@ export default class Storage {
 
     get() {
         const localStorageValue = localStorage.getItem(this.key);
-        return localStorageValue;
+        return (this.data = JSON.parse(localStorageValue) || []);
     }
 }

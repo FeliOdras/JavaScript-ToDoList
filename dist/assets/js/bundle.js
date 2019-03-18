@@ -109,7 +109,7 @@ function () {
     _classCallCheck(this, Storage);
 
     this.key = localStorageKey;
-    this.data = this.get() || [];
+    this.data = this.get();
   }
 
   _createClass(Storage, [{
@@ -129,7 +129,7 @@ function () {
     key: "get",
     value: function get() {
       var localStorageValue = localStorage.getItem(this.key);
-      return localStorageValue;
+      return this.data = JSON.parse(localStorageValue) || [];
     }
   }]);
 
@@ -169,9 +169,10 @@ addNoteButton.addEventListener('click', function (e) {
   renderNotes(note);
 });
 
-var renderNotes = function renderNotes(note) {
-  var templateOfNotes = "\n    <div class=\"col-md-4 col-sm-12 note\">\n        ".concat(note, "\n    </div>\n    ");
-  noteContainer.innerHTML = templateOfNotes;
+var renderNotes = function renderNotes(notes) {
+  noteContainer.innerHTML = notes.map(function (note) {
+    return "\n                        <div class=\"col-md-4 col-sm-12 note\">\n                            ".concat(note, "\n                        </div>\n                        ");
+  }).join('');
 };
 
 renderNotes(noteStorage.get());

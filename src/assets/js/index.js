@@ -16,13 +16,15 @@ addNoteButton.addEventListener('click', e => {
     renderNotes(note);
 })
 
-const renderNotes = note => {
-    const templateOfNotes = `
-    <div class="col-md-4 col-sm-12 note">
-        ${note}
-    </div>
-    `;
-    noteContainer.innerHTML = templateOfNotes;
+const renderNotes = notes => {
+    noteContainer.innerHTML = notes
+        .map(note => {
+            return `
+                        <div class="col-md-4 col-sm-12 note">
+                            ${note}
+                        </div>
+                        `
+        }).join('')
 }
 
 renderNotes(noteStorage.get());
