@@ -103,12 +103,13 @@ var $ = function $(selector) {
   return document.querySelector(selector);
 };
 
+var noteStorageKey = "myAwesomeNote";
 var addNoteInput = $('#add-note');
 var addNoteButton = $('#add-note-button');
 var noteContainer = $('#notes');
 addNoteButton.addEventListener('click', function (e) {
   var note = addNoteInput.value;
-  localStorage.setItem('Note', note);
+  localStorage.setItem(noteStorageKey, note);
   renderNotes(note);
 });
 
@@ -116,6 +117,8 @@ var renderNotes = function renderNotes(note) {
   var templateOfNotes = "\n    <div class=\"col-md-4 col-sm-12 note\">\n        ".concat(note, "\n    </div>\n    ");
   noteContainer.innerHTML = templateOfNotes;
 };
+
+renderNotes(localStorage.getItem(noteStorageKey));
 
 /***/ }),
 
