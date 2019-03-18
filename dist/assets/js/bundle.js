@@ -105,6 +105,9 @@ var $ = function $(selector) {
 
 var addNoteInput = $('#add-note');
 var addNoteButton = $('#add-note-button');
+addNoteButton.addEventListener('click', function (e) {
+  console.log('hey hey hey');
+});
 console.log(addNoteInput, addNoteButton);
 
 /***/ }),
