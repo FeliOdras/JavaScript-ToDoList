@@ -129,7 +129,8 @@ function () {
     key: "get",
     value: function get() {
       var localStorageValue = localStorage.getItem(this.key);
-      return this.data = JSON.parse(localStorageValue) || [];
+      this.data = JSON.parse(localStorageValue) || [];
+      return this.data;
     }
   }]);
 
@@ -166,12 +167,12 @@ var noteContainer = $('#notes');
 addNoteButton.addEventListener('click', function (e) {
   var note = addNoteInput.value;
   noteStorage.addDataSet(note);
-  renderNotes(note);
+  renderNotes(noteStorage.data);
 });
 
 var renderNotes = function renderNotes(notes) {
   noteContainer.innerHTML = notes.map(function (note) {
-    return "\n                        <div class=\"col-md-4 col-sm-12 note\">\n                            ".concat(note, "\n                        </div>\n                        ");
+    return "\n            <div class=\"col-md-4 col-sm-12 note\">\n                ".concat(note, "\n            </div>\n            ");
   }).join('');
 };
 

@@ -13,17 +13,17 @@ const noteContainer = $('#notes');
 addNoteButton.addEventListener('click', e => {
     const note = addNoteInput.value;
     noteStorage.addDataSet(note);
-    renderNotes(note);
+    renderNotes(noteStorage.data);
 })
 
 const renderNotes = notes => {
     noteContainer.innerHTML = notes
         .map(note => {
             return `
-                        <div class="col-md-4 col-sm-12 note">
-                            ${note}
-                        </div>
-                        `
+            <div class="col-md-4 col-sm-12 note">
+                ${note}
+            </div>
+            `
         }).join('')
 }
 
