@@ -107,7 +107,7 @@ var addNoteInput = $('#add-note');
 var addNoteButton = $('#add-note-button');
 addNoteButton.addEventListener('click', function (e) {
   var note = addNoteInput.value;
-  console.log(note);
+  localStorage.setItem('Note', note);
 });
 console.log(addNoteInput, addNoteButton);
 
