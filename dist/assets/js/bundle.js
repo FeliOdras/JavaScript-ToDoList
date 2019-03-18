@@ -151,7 +151,6 @@ var $ = function $(selector) {
   return document.querySelector(selector);
 };
 
-var noteStorageKey = "myAwesomeNote";
 var addNoteInput = $('#add-note');
 var addNoteButton = $('#add-note-button');
 var noteContainer = $('#notes');

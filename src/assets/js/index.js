@@ -6,7 +6,6 @@ const noteStorage = new Storage("myAwesomeNote")
 // Helper
 const $ = (selector) => document.querySelector(selector);
 
-const noteStorageKey = "myAwesomeNote"
 const addNoteInput = $('#add-note');
 const addNoteButton = $('#add-note-button');
 const noteContainer = $('#notes')
