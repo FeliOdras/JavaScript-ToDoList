@@ -7,7 +7,8 @@ const addNoteInput = $('#add-note');
 const addNoteButton = $('#add-note-button');
 
 addNoteButton.addEventListener('click', e => {
-    console.log('hey hey hey');
+    const note = addNoteInput.value;
+    console.log(note);
 })
 
 console.log(addNoteInput, addNoteButton);
