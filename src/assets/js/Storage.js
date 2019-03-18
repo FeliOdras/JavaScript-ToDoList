@@ -1,10 +1,18 @@
 export default class Storage {
     constructor(localStorageKey) {
         this.key = localStorageKey;
+        this.data = this.get() || [];
     }
 
-    save(ele) {
-        localStorage.setItem(this.key, ele);
+    addDataSet(dataParam) {
+        this.data.push(dataParam);
+        this.save();
+    }
+
+    save() {
+        const data = this.data;
+        const stringified = JSON.stringify(data);
+        localStorage.setItem(this.key, stringified);
     }
 
     get() {

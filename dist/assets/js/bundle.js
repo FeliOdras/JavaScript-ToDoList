@@ -109,12 +109,21 @@ function () {
     _classCallCheck(this, Storage);
 
     this.key = localStorageKey;
+    this.data = this.get() || [];
   }
 
   _createClass(Storage, [{
+    key: "addDataSet",
+    value: function addDataSet(dataParam) {
+      this.data.push(dataParam);
+      this.save();
+    }
+  }, {
     key: "save",
-    value: function save(ele) {
-      localStorage.setItem(this.key, ele);
+    value: function save() {
+      var data = this.data;
+      var stringified = JSON.stringify(data);
+      localStorage.setItem(this.key, stringified);
     }
   }, {
     key: "get",
@@ -156,7 +165,7 @@ var addNoteButton = $('#add-note-button');
 var noteContainer = $('#notes');
 addNoteButton.addEventListener('click', function (e) {
   var note = addNoteInput.value;
-  noteStorage.save(note);
+  noteStorage.addDataSet(note);
   renderNotes(note);
 });
 
