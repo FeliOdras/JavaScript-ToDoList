@@ -1,10 +1,11 @@
 .note {
-    margin: 8px;
     padding: 8px;
-    background-color: rgb(255, 233, 211);
-    min-height: 150px;
-    font-family: "Indie Flower", cursive;
-    color: darkslategray;
-    background-image: url(../img/paperbg.jpg);
-    background-size: cover;
+
+    .inner-wrapper {
+        min-height: 150px;
+        font-family: "Indie Flower", cursive;
+        color: darkslategray;
+        background-image: url(../img/paperbg.jpg);
+        background-size: cover;
+    }
 }

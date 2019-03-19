@@ -16,8 +16,10 @@ export const renderNotes = notes => {
   domElements.noteContainer.innerHTML = notes
     .map((note, index) => {
       return `
-        <div class="note col-lg-4" id="note-id-${index}">
-          ${note}
+        <div class="note col-lg-3 col-md-4 col-sm-12" id="note-id-${index}">
+          <div class="inner-wrapper p-3">
+            ${note}
+          </div>
         </div>
       `
     })
