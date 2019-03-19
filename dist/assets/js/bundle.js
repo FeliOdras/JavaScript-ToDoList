@@ -267,6 +267,19 @@ var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
     return "\n        <div class=\"note col-lg-4\" id=\"note-".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
   }).join("");
+  targetNotes();
+};
+
+var targetNotes = function targetNotes() {
+  var noteDiv = document.querySelectorAll('.note');
+
+  if (noteDiv !== null) {
+    noteDiv.forEach(function (oneDiv) {
+      oneDiv.addEventListener('click', function () {
+        console.log("Clicked div ".concat(oneDiv.id));
+      });
+    });
+  }
 };
 
 /***/ }),
@@ -288,7 +301,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var addNoteButton = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteButton,
-    addNoteInput = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteInput;
+    addNoteInput = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteInput,
+    noteDiv = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].noteDiv;
+console.log(_helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"]);
 addNoteButton.addEventListener("click", function () {
   var note = addNoteInput.value;
 

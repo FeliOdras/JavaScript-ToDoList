@@ -17,4 +17,18 @@ export const renderNotes = notes => {
       `
     })
     .join("")
+
+  targetNotes()
+}
+
+
+const targetNotes = () => {
+  const noteDiv = document.querySelectorAll('.note');
+  if (noteDiv !== null) {
+    noteDiv.forEach(oneDiv => {
+      oneDiv.addEventListener('click', () => {
+        console.log(`Clicked div ${oneDiv.id}`)
+      })
+    });
+  }
 }

@@ -10,8 +10,10 @@ import {
 
 const {
     addNoteButton,
-    addNoteInput
+    addNoteInput,
+    noteDiv,
 } = domElements
+console.log(domElements)
 
 addNoteButton.addEventListener("click", () => {
     const note = addNoteInput.value
