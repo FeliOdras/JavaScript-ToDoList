@@ -30,7 +30,6 @@ const targetNotes = () => {
   if (noteDiv !== null) {
     noteDiv.forEach(oneDiv => {
       oneDiv.addEventListener('click', () => {
-        console.log(`Clicked div ${oneDiv.id}`)
         noteStorage.emit("removeItem", oneDiv.id)
       })
     });
