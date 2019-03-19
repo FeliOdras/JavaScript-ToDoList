@@ -301,9 +301,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var addNoteButton = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteButton,
-    addNoteInput = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteInput,
-    noteDiv = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].noteDiv;
-console.log(_helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"]);
+    addNoteInput = _helpers__WEBPACK_IMPORTED_MODULE_2__["domElements"].addNoteInput;
 addNoteButton.addEventListener("click", function () {
   var note = addNoteInput.value;
 
