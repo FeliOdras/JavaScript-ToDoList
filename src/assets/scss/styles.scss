@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 
-.note {
-    margin: 8px;
-    padding: 8px;
-    background-color: rgb(255, 233, 211);
-}
+@import "partials/header";
+@import "partials/main";
+@import "partials/notes";
+@import "partials/footer";
