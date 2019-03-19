@@ -209,6 +209,7 @@ function (_Events) {
     key: "removeDataSet",
     value: function removeDataSet(dataParam) {
       console.log("OK Remove key => ".concat(dataParam));
+      console.log("the data => ".concat(this.data));
     }
   }, {
     key: "save",

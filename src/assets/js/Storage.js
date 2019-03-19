@@ -19,6 +19,7 @@ export default class Storage extends Events {
 
     removeDataSet(dataParam) {
         console.log(`OK Remove key => ${dataParam}`)
+        console.log(`the data => ${this.data}`)
     }
 
     save() {
