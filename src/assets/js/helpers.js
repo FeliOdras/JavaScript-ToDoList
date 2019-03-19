@@ -1,3 +1,7 @@
+import {
+  noteStorage
+} from "./Storage";
+
 // Helper
 export const $ = selector => document.querySelector(selector)
 
@@ -21,13 +25,13 @@ export const renderNotes = notes => {
   targetNotes()
 }
 
-
 const targetNotes = () => {
   const noteDiv = document.querySelectorAll('.note');
   if (noteDiv !== null) {
     noteDiv.forEach(oneDiv => {
       oneDiv.addEventListener('click', () => {
         console.log(`Clicked div ${oneDiv.id}`)
+        noteStorage.emit("removeItem", oneDiv.id)
       })
     });
   }

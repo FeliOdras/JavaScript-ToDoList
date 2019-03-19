@@ -17,6 +17,10 @@ export default class Storage extends Events {
         this.save();
     }
 
+    removeDataSet(dataParam) {
+        console.log(`OK Remove key => ${dataParam}`)
+    }
+
     save() {
         const data = this.data;
         const stringified = JSON.stringify(data);
@@ -43,6 +47,10 @@ noteStorage.on("addItem", note => {
 
 noteStorage.on("updated", notes => {
     renderNotes(notes)
+})
+
+noteStorage.on("removeItem", note => {
+    noteStorage.removeDataSet(note)
 })
 
 noteStorage.initFinished()
