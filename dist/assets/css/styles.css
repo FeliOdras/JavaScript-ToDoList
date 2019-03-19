@@ -7023,7 +7023,8 @@ a.text-dark:hover, a.text-dark:focus {
 .note {
   margin: 8px;
   padding: 8px;
-  background-color: #ffe9d3; }
+  background-color: #ffe9d3;
+  min-height: 150px; }
 
 
 /*# sourceMappingURL=styles.css.map*/
