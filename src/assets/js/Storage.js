@@ -18,8 +18,6 @@ export default class Storage extends Events {
     }
 
     removeDataSet(dataParam) {
-        console.log(`OK Remove key => ${dataParam}`)
-        console.log(this.data)
         this.data.splice(dataParam, 1);
         // this.data = this.data.filter((notes, index) => index != dataParam)
         this.emit('updated', this.data)
