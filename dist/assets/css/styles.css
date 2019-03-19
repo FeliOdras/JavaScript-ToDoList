@@ -7025,7 +7025,10 @@ a.text-dark:hover, a.text-dark:focus {
   margin: 8px;
   padding: 8px;
   background-color: #ffe9d3;
-  min-height: 150px; }
+  min-height: 150px;
+  font-family: "Indie Flower", cursive;
+  color: steelblue;
+  background-image: url(../img/paperbg.jpg); }
 
 
 /*# sourceMappingURL=styles.css.map*/
