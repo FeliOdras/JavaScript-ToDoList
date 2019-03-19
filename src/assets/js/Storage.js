@@ -19,7 +19,8 @@ export default class Storage extends Events {
 
     removeDataSet(dataParam) {
         console.log(`OK Remove key => ${dataParam}`)
-        console.log(`the data => ${this.data}`)
+        console.log(this.data)
+        this.data.splice(dataParam, 1);
         this.emit('updated', this.data)
         this.save();
     }

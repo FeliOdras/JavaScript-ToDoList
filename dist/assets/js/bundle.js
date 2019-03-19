@@ -209,7 +209,8 @@ function (_Events) {
     key: "removeDataSet",
     value: function removeDataSet(dataParam) {
       console.log("OK Remove key => ".concat(dataParam));
-      console.log("the data => ".concat(this.data));
+      console.log(this.data);
+      this.data.splice(dataParam, 1);
       this.emit('updated', this.data);
       this.save();
     }
@@ -274,20 +275,20 @@ var $ = function $(selector) {
 var domElements = {
   addNoteInput: $("#add-note"),
   addNoteButton: $("#add-note-button"),
-  noteContainer: $("#notes")
+  noteContainer: $("#notes"),
+  noteDiv: null
 };
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-4\" id=\"note-".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
+    return "\n        <div class=\"note col-lg-4\" id=\"".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
   }).join("");
+  domElements.noteDiv = document.querySelectorAll(".note");
   targetNotes();
 };
 
 var targetNotes = function targetNotes() {
-  var noteDiv = document.querySelectorAll('.note');
-
-  if (noteDiv !== null) {
-    noteDiv.forEach(function (oneDiv) {
+  if (domElements.noteDiv !== null) {
+    domElements.noteDiv.forEach(function (oneDiv) {
       oneDiv.addEventListener('click', function () {
         _Storage__WEBPACK_IMPORTED_MODULE_0__["noteStorage"].emit("removeItem", oneDiv.id);
       });
