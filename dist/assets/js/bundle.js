@@ -264,8 +264,8 @@ var domElements = {
   noteContainer: $("#notes")
 };
 var renderNotes = function renderNotes(notes) {
-  domElements.noteContainer.innerHTML = notes.map(function (note, key) {
-    return "\n        <div class=\"note col-lg-4\" id=\"note-".concat(key, "\">\n          ").concat(note, "\n        </div>\n      ");
+  domElements.noteContainer.innerHTML = notes.map(function (note, index) {
+    return "\n        <div class=\"note col-lg-4\" id=\"note-".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
   }).join("");
 };
 

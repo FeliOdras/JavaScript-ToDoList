@@ -9,9 +9,9 @@ export const domElements = {
 
 export const renderNotes = notes => {
   domElements.noteContainer.innerHTML = notes
-    .map((note, key) => {
+    .map((note, index) => {
       return `
-        <div class="note col-lg-4" id="note-${key}">
+        <div class="note col-lg-4" id="note-${index}">
           ${note}
         </div>
       `
