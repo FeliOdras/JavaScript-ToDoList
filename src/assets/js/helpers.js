@@ -6,9 +6,9 @@ import {
 export const $ = selector => document.querySelector(selector)
 
 export const domElements = {
-  addNoteInput: $("#add-note"),
-  addNoteButton: $("#add-note-button"),
-  noteContainer: $("#notes"),
+  addNoteInput: $("#add-task-input"),
+  addNoteButton: $("#add-task-button"),
+  noteContainer: $("#tasks"),
   noteDiv: null
 }
 
@@ -16,11 +16,10 @@ export const renderNotes = notes => {
   domElements.noteContainer.innerHTML = notes
     .map((note, index) => {
       return `
-        <div class="note col-lg-3 col-md-4 col-sm-6 p-3 text-center h4" id="note-id-${index}">
-        <div class="pin"></div>
-          <div class="inner-wrapper pt-5 p-3 ">
+        <div class="note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4" id="${index}">
+          <div class="inner-wrapper pt-5 p-3">
             ${note}
-          </div>        
+          </div>
         </div>
       `
     })
@@ -34,6 +33,7 @@ const targetNotes = () => {
   if (domElements.noteDiv !== null) {
     domElements.noteDiv.forEach(oneDiv => {
       oneDiv.addEventListener('click', () => {
+        console.log(oneDiv.id)
         noteStorage.emit("removeItem", oneDiv.id)
       })
     });
