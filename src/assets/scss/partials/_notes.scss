@@ -5,7 +5,9 @@
         min-height: 150px;
         font-family: "Indie Flower", cursive;
         color: darkslategray;
-        background-image: url(../img/paperbg.jpg);
+        background-color: #F4E75B;
         background-size: cover;
+        transform: rotate(3deg);
+        box-shadow: 6px 6px 10px #ccc;
     }
 }
