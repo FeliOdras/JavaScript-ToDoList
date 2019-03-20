@@ -22,14 +22,15 @@
         <div class="add-tasks row p-3">
           <div class="col-12">
             <div class="form-group">
-              <label for="add-note" class="font-weight-bold">Add a new task:</label>
-              <input type="text" class="form-control" id="add-note" placeholder="Add your note here">
+              <label for="add-task" class="small">Add a new task:</label>
+              <input type="text" class="form-control add-task-input rounded-0 border-1 border-tasks" id="add-task-input"
+                placeholder="Add your task description here">
             </div>
-            <button type="submit" id="add-note-button" class="btn btn-primary">Add</button>
+            <button type="submit" id="add-task-button" class="add-task-button btn btn-primary rounded-0">Add new task</button>
           </div>
         </div>
         <hr>
-        <div class="row" id="notes">
+        <div class="row" id="tasks">
         </div>
       </div>
     </main>
