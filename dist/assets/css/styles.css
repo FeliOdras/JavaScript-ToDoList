@@ -7045,7 +7045,7 @@ header {
     color: #E4D6B5;
     font-family: "Special Elite", monopace; }
     #main-content .add-tasks .add-task-input::placeholder {
-      color: #441c0f; }
+      color: #777; }
 
 .note {
   padding: 8px;
