@@ -20,7 +20,7 @@
         .add-task-input {
             border-color: $tasks-text-color;
             background: rgba(255, 255, 255, .4);
-            color: $tasks-text-color;
+            color: $tasks-accent-color;
             font-family: $font-monospace;
 
             &::placeholder {

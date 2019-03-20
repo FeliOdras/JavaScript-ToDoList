@@ -272,9 +272,9 @@ var $ = function $(selector) {
   return document.querySelector(selector);
 };
 var domElements = {
-  addNoteInput: $("#add-note"),
-  addNoteButton: $("#add-note-button"),
-  noteContainer: $("#notes"),
+  addNoteInput: $("#add-task-input"),
+  addNoteButton: $("#add-task-button"),
+  noteContainer: $("#tasks"),
   noteDiv: null
 };
 var renderNotes = function renderNotes(notes) {

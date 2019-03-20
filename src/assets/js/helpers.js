@@ -6,9 +6,9 @@ import {
 export const $ = selector => document.querySelector(selector)
 
 export const domElements = {
-  addNoteInput: $("#add-note"),
-  addNoteButton: $("#add-note-button"),
-  noteContainer: $("#notes"),
+  addNoteInput: $("#add-task-input"),
+  addNoteButton: $("#add-task-button"),
+  noteContainer: $("#tasks"),
   noteDiv: null
 }
 
