@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico|Special+Elite);
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -7026,7 +7026,7 @@ header {
   font-family: Pacifico, cursive;
   color: #441c0f; }
 
-.page {
+#page {
   width: 100vw;
   height: 100vh;
   background-image: url(../img/background.jpg);
