@@ -13,10 +13,19 @@
         background-color: rgba(68, 28, 15, .5);
 
         label {
-            font-family: 'Special Elite', monospace;
-            color: #E4D6B5
+            font-family: $font-monospace;
+            color: $tasks-text-color;
         }
 
-        .add-task-input {}
+        .add-task-input {
+            border-color: $tasks-text-color;
+            background: rgba(255, 255, 255, .4);
+            color: $tasks-text-color;
+            font-family: $font-monospace;
+
+            &::placeholder {
+                color: $tasks-accent-color;
+            }
+        }
     }
 }
