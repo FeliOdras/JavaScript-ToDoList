@@ -1,0 +1,38 @@
+#page {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+#main-content {
+
+    .add-tasks {
+        background-color: rgba(68, 28, 15, .5);
+
+        label {
+            font-family: $font-monospace;
+            color: $tasks-text-color;
+        }
+
+        .add-task-input {
+            border-color: $tasks-text-color;
+            background: rgba(255, 255, 255, .4);
+            color: $tasks-accent-color;
+            font-family: $font-monospace;
+
+            &::placeholder {
+                color: #777;
+            }
+        }
+
+        .add-task-button {
+            background-color: $tasks-accent-color;
+            color: $tasks-text-color;
+            font-family: $font-monospace;
+        }
+    }
+}

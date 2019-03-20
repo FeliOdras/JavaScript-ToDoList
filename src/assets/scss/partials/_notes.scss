@@ -1,0 +1,24 @@
+.note {
+    padding: 8px;
+    position: relative;
+
+    .pin {
+        background-image: url(../img/pin.png);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        z-index: 99;
+        position: absolute;
+        left: 50%;
+    }
+
+    .inner-wrapper {
+        min-height: 150px;
+        font-family: "Indie Flower", cursive;
+        color: darkslategray;
+        background-color: #F4E75B;
+        background-size: cover;
+        transform: rotate(3deg);
+        box-shadow: 6px 6px 10px #666;
+    }
+}

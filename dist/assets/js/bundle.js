@@ -272,14 +272,14 @@ var $ = function $(selector) {
   return document.querySelector(selector);
 };
 var domElements = {
-  addNoteInput: $("#add-note"),
-  addNoteButton: $("#add-note-button"),
-  noteContainer: $("#notes"),
+  addNoteInput: $("#add-task-input"),
+  addNoteButton: $("#add-task-button"),
+  noteContainer: $("#tasks"),
   noteDiv: null
 };
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-4\" id=\"note-id-".concat(index, "\">\n          ").concat(note, "\n        </div>\n      ");
+    return "\n        <div class=\"note col-lg-3 col-md-4 col-sm-6 p-3 text-center h4\" id=\"note-id-".concat(index, "\">\n        <div class=\"pin\"></div>\n          <div class=\"inner-wrapper pt-5 p-3 \">\n            ").concat(note, "\n          </div>        \n        </div>\n      ");
   }).join("");
   domElements.noteDiv = document.querySelectorAll(".note");
   targetNotes();
