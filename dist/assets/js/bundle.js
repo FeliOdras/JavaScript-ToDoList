@@ -289,7 +289,6 @@ var targetNotes = function targetNotes() {
   if (domElements.noteDiv !== null) {
     domElements.noteDiv.forEach(function (oneDiv) {
       oneDiv.addEventListener('click', function () {
-        console.log(oneDiv.id);
         _Storage__WEBPACK_IMPORTED_MODULE_0__["noteStorage"].emit("removeItem", oneDiv.id);
       });
     });
