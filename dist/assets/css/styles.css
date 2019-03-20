@@ -7050,7 +7050,8 @@ header {
   #main-content .add-tasks .add-task-button {
     background-color: #441c0f;
     color: #E4D6B5;
-    font-family: "Special Elite", monopace; }
+    font-family: "Special Elite", monopace;
+    border-color: #E4D6B5; }
 
 .note {
   padding: 8px;
