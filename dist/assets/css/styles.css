@@ -7021,6 +7021,9 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+header {
+  background-color: rgba(255, 255, 255, 0.3); }
+
 .page {
   width: 100vw;
   height: 100vh;
