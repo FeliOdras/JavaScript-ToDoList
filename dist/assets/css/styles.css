@@ -7034,6 +7034,11 @@ header {
   background-position: 50%;
   background-attachment: fixed; }
 
+#main-content .add-tasks {
+  background-color: rgba(68, 28, 15, 0.5); }
+  #main-content .add-tasks label {
+    font-family: 'Special Elite', monospace; }
+
 .note {
   padding: 8px;
   position: relative; }
