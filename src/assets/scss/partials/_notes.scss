@@ -1,5 +1,16 @@
 .note {
     padding: 8px;
+    position: relative;
+
+    .pin {
+        background-image: url(../img/pin.png);
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        z-index: 99;
+        position: absolute;
+        left: 50%;
+    }
 
     .inner-wrapper {
         min-height: 150px;

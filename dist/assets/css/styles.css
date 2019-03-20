@@ -7030,7 +7030,16 @@ a.text-dark:hover, a.text-dark:focus {
   background-attachment: fixed; }
 
 .note {
-  padding: 8px; }
+  padding: 8px;
+  position: relative; }
+  .note .pin {
+    background-image: url(../img/pin.png);
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    z-index: 99;
+    position: absolute;
+    left: 50%; }
   .note .inner-wrapper {
     min-height: 150px;
     font-family: "Indie Flower", cursive;
