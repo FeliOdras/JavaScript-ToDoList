@@ -2,16 +2,18 @@
 
 _Javascript To-Do-List - Add and remove tasks dynamically_
 
-![Preview Image](./assets/images/CountdownLandingPage.png)
+![Preview Image](./JS-ToDiList.png)
 
 ---
-#### **[Visit Poject Site &raquo;](https://playground.odras.de/Countdown/)**
+#### **[Visit Poject Site &raquo;](https://playground.odras.de/ToDoList/)**
 ---
 
 ## Features
-- Countdown to set date
+- Add and remove tasks
+- Store items in local storage
 
 ## Technologies
 - JavaScript
 - HTML/CSS/SCSS
-- moment.js
+- WebPack
+- Bootstrap
