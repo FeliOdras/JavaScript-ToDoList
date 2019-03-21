@@ -7052,6 +7052,27 @@ header {
   background-position: 50%;
   background-attachment: fixed;
   overflow: scroll; }
+<<<<<<< HEAD
+=======
+
+#main-content .add-tasks {
+  background-color: rgba(68, 28, 15, 0.5); }
+  #main-content .add-tasks label {
+    font-family: "Special Elite", monopace;
+    color: #E4D6B5; }
+  #main-content .add-tasks .add-task-input {
+    border-color: #E4D6B5;
+    background: rgba(255, 255, 255, 0.4);
+    color: #441c0f;
+    font-family: "Special Elite", monopace; }
+    #main-content .add-tasks .add-task-input::placeholder {
+      color: #777; }
+  #main-content .add-tasks .add-task-button {
+    background-color: #441c0f;
+    color: #E4D6B5;
+    font-family: "Special Elite", monopace;
+    border-color: #E4D6B5; }
+>>>>>>> c7c04b54bb0def282bf44623c46b15c4893e36ec
 
 .note {
   padding: 8px;
