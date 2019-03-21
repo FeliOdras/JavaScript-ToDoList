@@ -1,16 +1,14 @@
-import {
-  noteStorage
-} from "./Storage";
+import { noteStorage } from "./Storage";
 
 // Helper
-export const $ = selector => document.querySelector(selector)
+export const $ = selector => document.querySelector(selector);
 
 export const domElements = {
   addNoteInput: $("#add-task-input"),
   addNoteButton: $("#add-task-button"),
   noteContainer: $("#tasks"),
   noteDiv: null
-}
+};
 
 export const renderNotes = notes => {
   domElements.noteContainer.innerHTML = notes
@@ -20,22 +18,23 @@ export const renderNotes = notes => {
         <div class="pin"></div>
           <div class="inner-wrapper pt-5 p-3">
             ${note}
+            <button class="task-finished">Finished!</button>
           </div>
         </div>
-      `
+      `;
     })
-    .join("")
+    .join("");
 
-  domElements.noteDiv = document.querySelectorAll(".note")
-  targetNotes()
-}
+  domElements.taskFinished = document.querySelectorAll(".task-finished");
+  targetNotes();
+};
 
 const targetNotes = () => {
-  if (domElements.noteDiv !== null) {
-    domElements.noteDiv.forEach(oneDiv => {
-      oneDiv.addEventListener('click', () => {
-        noteStorage.emit("removeItem", oneDiv.id)
-      })
+  if (domElements.taskFinished !== null) {
+    domElements.taskFinished.forEach(oneDiv => {
+      oneDiv.addEventListener("click", () => {
+        noteStorage.emit("removeItem", oneDiv.id);
+      });
     });
   }
-}
+};

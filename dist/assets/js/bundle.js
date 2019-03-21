@@ -279,16 +279,16 @@ var domElements = {
 };
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4\" id=\"".concat(index, "\">\n        <div class=\"pin\"></div>\n          <div class=\"inner-wrapper pt-5 p-3\">\n            ").concat(note, "\n          </div>\n        </div>\n      ");
+    return "\n        <div class=\"note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4\" id=\"".concat(index, "\">\n        <div class=\"pin\"></div>\n          <div class=\"inner-wrapper pt-5 p-3\">\n            ").concat(note, "\n            <button class=\"task-finished\">Finished!</button>\n          </div>\n        </div>\n      ");
   }).join("");
-  domElements.noteDiv = document.querySelectorAll(".note");
+  domElements.taskFinished = document.querySelectorAll(".task-finished");
   targetNotes();
 };
 
 var targetNotes = function targetNotes() {
-  if (domElements.noteDiv !== null) {
-    domElements.noteDiv.forEach(function (oneDiv) {
-      oneDiv.addEventListener('click', function () {
+  if (domElements.taskFinished !== null) {
+    domElements.taskFinished.forEach(function (oneDiv) {
+      oneDiv.addEventListener("click", function () {
         _Storage__WEBPACK_IMPORTED_MODULE_0__["noteStorage"].emit("removeItem", oneDiv.id);
       });
     });
