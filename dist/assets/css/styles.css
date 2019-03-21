@@ -7026,6 +7026,24 @@ header {
   font-family: Pacifico, cursive;
   color: #441c0f; }
 
+.add-tasks {
+  background-color: rgba(68, 28, 15, 0.5); }
+  .add-tasks label {
+    font-family: "Special Elite", monopace;
+    color: #E4D6B5; }
+  .add-tasks .add-task-input {
+    border-color: #E4D6B5;
+    background: rgba(255, 255, 255, 0.4);
+    color: #441c0f;
+    font-family: "Special Elite", monopace; }
+    .add-tasks .add-task-input::placeholder {
+      color: #777; }
+  .add-tasks .add-task-button {
+    background-color: #441c0f;
+    color: #E4D6B5;
+    font-family: "Special Elite", monopace;
+    border-color: #E4D6B5; }
+
 #page {
   width: 100vw;
   height: 100vh;
@@ -7034,24 +7052,6 @@ header {
   background-position: 50%;
   background-attachment: fixed;
   overflow: scroll; }
-
-#main-content .add-tasks {
-  background-color: rgba(68, 28, 15, 0.5); }
-  #main-content .add-tasks label {
-    font-family: "Special Elite", monopace;
-    color: #E4D6B5; }
-  #main-content .add-tasks .add-task-input {
-    border-color: #E4D6B5;
-    background: rgba(255, 255, 255, 0.4);
-    color: #441c0f;
-    font-family: "Special Elite", monopace; }
-    #main-content .add-tasks .add-task-input::placeholder {
-      color: #777; }
-  #main-content .add-tasks .add-task-button {
-    background-color: #441c0f;
-    color: #E4D6B5;
-    font-family: "Special Elite", monopace;
-    border-color: #E4D6B5; }
 
 .note {
   padding: 8px;
