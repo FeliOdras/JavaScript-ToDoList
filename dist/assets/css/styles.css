@@ -7074,12 +7074,13 @@ header {
     box-shadow: 6px 6px 10px #666; }
     .note .inner-wrapper .task-finished {
       background-color: #E4D6B5;
-      color: #441c0f;
-      border: 1px solid #441c0f;
+      color: darkslategray;
+      border: 1px solid darkslategray;
       transition: all .5s; }
       .note .inner-wrapper .task-finished:hover {
         color: #E4D6B5;
-        background-color: #441c0f; }
+        background-color: #441c0f;
+        border-color: #441c0f; }
 
 
 /*# sourceMappingURL=styles.css.map*/
