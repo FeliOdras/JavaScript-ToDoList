@@ -17,8 +17,9 @@ export const renderNotes = notes => {
         <div class="note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4" id="${index}">
         <div class="pin"></div>
           <div class="inner-wrapper pt-5 p-3">
-            ${note}
-            <button class="task-finished">Finished!</button>
+          ${index + 1}.
+            ${note}<br>
+            <button class="task-finished small mt-3">Finished!</button>
           </div>
         </div>
       `;

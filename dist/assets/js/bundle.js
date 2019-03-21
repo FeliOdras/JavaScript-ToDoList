@@ -279,7 +279,7 @@ var domElements = {
 };
 var renderNotes = function renderNotes(notes) {
   domElements.noteContainer.innerHTML = notes.map(function (note, index) {
-    return "\n        <div class=\"note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4\" id=\"".concat(index, "\">\n        <div class=\"pin\"></div>\n          <div class=\"inner-wrapper pt-5 p-3\">\n            ").concat(note, "\n            <button class=\"task-finished\">Finished!</button>\n          </div>\n        </div>\n      ");
+    return "\n        <div class=\"note col-lg-3 col-md-4 col-sm-12 p-3 text-center h4\" id=\"".concat(index, "\">\n        <div class=\"pin\"></div>\n          <div class=\"inner-wrapper pt-5 p-3\">\n          ").concat(index + 1, ".\n            ").concat(note, "<br>\n            <button class=\"task-finished small mt-3\">Finished!</button>\n          </div>\n        </div>\n      ");
   }).join("");
   domElements.taskFinished = document.querySelectorAll(".task-finished");
   targetNotes();
