@@ -20,5 +20,17 @@
         background-size: cover;
         transform: rotate(3deg);
         box-shadow: 6px 6px 10px #666;
+
+        .task-finished {
+            background-color: $tasks-text-color;
+            color: $tasks-accent-color;
+            border: 1px solid $tasks-accent-color;
+            transition: all .5s;
+
+            &:hover {
+                color: $tasks-text-color;
+                background-color: $tasks-accent-color;
+            }
+        }
     }
 }
